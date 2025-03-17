@@ -1,0 +1,14 @@
+# Function to find min and max values of a vector
+find_min_max <- function(vec) {
+  min_value <- min(vec)  # Find minimum value
+  max_value <- max(vec)  # Find maximum value
+  
+  cat("Minimum value:", min_value, "\n")
+  cat("Maximum value:", max_value, "\n")
+}
+
+# Example vector
+vec <- c(12, 45, 7, 89, -3, 56, 23)
+
+# Call function to find min and max
+find_min_max(vec)
