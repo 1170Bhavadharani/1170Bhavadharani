@@ -1,0 +1,10 @@
+# Generate 100 random numbers from a normal distribution (mean = 0, sd = 1)
+set.seed(123)  # For reproducibility
+random_numbers <- round(rnorm(100, mean = 0, sd = 1), 1)  # Rounded to 1 decimal place
+
+# Count occurrences of each unique value
+occurrences <- table(random_numbers)
+
+# Print the results
+cat("Generated Random Numbers and Their Frequencies:\n")
+print(occurrences)
