@@ -1,0 +1,25 @@
+# Load the faithful dataset
+data("faithful")
+
+# Create a subset for the first 5 rows
+faithful_subset <- faithful[1:5, ]
+
+# Convert 'eruptions' into categorical (short, medium, long)
+faithful_subset$eruption_type <- cut(
+  faithful_subset$eruptions, 
+  breaks = c(-Inf, 2, 3.5, Inf), 
+  labels = c("short", "medium", "long")
+)
+
+# Convert 'waiting' into categorical (short, medium, long)
+faithful_subset$waiting_type <- cut(
+  faithful_subset$waiting, 
+  breaks = c(-Inf, 60, 75, Inf), 
+  labels = c("short", "medium", "long")
+)
+
+# Create a crosstab (contingency table)
+crosstab <- table(faithful_subset$eruption_type, faithful_subset$waiting_type)
+
+# Print crosstab output
+print(crosstab)
