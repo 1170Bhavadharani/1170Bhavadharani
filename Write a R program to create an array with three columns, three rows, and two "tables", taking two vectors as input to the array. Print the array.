@@ -1,0 +1,9 @@
+# Define two vectors
+vector1 <- c(1:9)   # First 9 values
+vector2 <- c(10:18) # Next 9 values
+
+# Combine vectors and create the array
+my_array <- array(c(vector1, vector2), dim = c(3, 3, 2))
+
+# Print the array
+print(my_array)
