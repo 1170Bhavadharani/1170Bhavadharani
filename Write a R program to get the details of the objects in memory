@@ -1,0 +1,18 @@
+# List all objects in memory
+objects_list <- ls()
+
+# Function to get size of each object
+objects_info <- sapply(objects_list, function(x) object.size(get(x)), simplify = FALSE)
+
+# Convert to a readable data frame
+objects_df <- data.frame(
+  Object = names(objects_info),
+  Size_Bytes = as.numeric(objects_info),
+  stringsAsFactors = FALSE
+)
+
+# Print the objects and their sizes
+print(objects_df)
+
+# Display total memory used
+cat("Total memory used:", sum(objects_df$Size_Bytes), "bytes\n")
