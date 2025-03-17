@@ -1,0 +1,14 @@
+# Function to find factors of a number
+find_factors <- function(n) {
+  factors <- which(n %% 1:n == 0)  # Find numbers that divide n evenly
+  return(factors)
+}
+
+# Take user input
+num <- as.integer(readline("Enter a number: "))
+
+# Get factors of the number
+factors <- find_factors(num)
+
+# Print the factors
+cat("Factors of", num, "are:", factors, "\n")
