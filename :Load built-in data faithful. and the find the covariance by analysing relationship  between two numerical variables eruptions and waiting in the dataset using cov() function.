@@ -1,0 +1,12 @@
+# Load built-in dataset
+data("faithful")
+
+# View first few rows of the dataset
+head(faithful)
+
+# Compute covariance between 'eruptions' and 'waiting'
+cov_value <- cov(faithful$eruptions, faithful$waiting)
+
+# Print the covariance
+cat("Covariance between 'eruptions' and 'waiting':", cov_value, "\n")
+
