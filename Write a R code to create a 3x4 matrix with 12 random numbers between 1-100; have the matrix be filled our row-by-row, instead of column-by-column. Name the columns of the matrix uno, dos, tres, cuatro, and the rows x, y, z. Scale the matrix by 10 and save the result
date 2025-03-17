@@ -1,0 +1,22 @@
+# Generate a 3x4 matrix with random numbers between 1 and 100
+set.seed(123)  # Setting seed for reproducibility
+mat <- matrix(sample(1:100, 12, replace = TRUE), nrow = 3, ncol = 4, byrow = TRUE)
+
+# Name the columns and rows
+colnames(mat) <- c("uno", "dos", "tres", "cuatro")
+rownames(mat) <- c("x", "y", "z")
+
+# Scale the matrix by 10
+scaled_mat <- mat * 10
+
+# Print matrices
+cat("Original Matrix:\n")
+print(mat)
+
+cat("\nScaled Matrix (multiplied by 10):\n")
+print(scaled_mat)
+
+# Save the scaled matrix
+write.csv(scaled_mat, "scaled_matrix.csv", row.names = TRUE)
+
+cat("\nScaled matrix saved as 'scaled_matrix.csv'.\n")
