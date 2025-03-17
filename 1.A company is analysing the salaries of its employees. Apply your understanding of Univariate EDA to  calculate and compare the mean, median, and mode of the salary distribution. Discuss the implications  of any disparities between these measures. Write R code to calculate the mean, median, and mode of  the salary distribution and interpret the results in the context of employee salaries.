@@ -1,0 +1,31 @@
+# Sample salary data
+salaries <- c(50000, 52000, 55000, 60000, 62000, 65000, 70000, 75000, 80000, 150000)
+
+# Calculate mean
+mean_salary <- mean(salaries)
+
+# Calculate median
+median_salary <- median(salaries)
+
+# Function to calculate mode
+get_mode <- function(x) {
+  uniq_vals <- unique(x)
+  uniq_vals[which.max(tabulate(match(x, uniq_vals)))]
+}
+
+# Calculate mode
+mode_salary <- get_mode(salaries)
+
+# Print results
+cat("Mean Salary:", mean_salary, "\n")
+cat("Median Salary:", median_salary, "\n")
+cat("Mode Salary:", mode_salary, "\n")
+
+# Interpretation
+if (mean_salary > median_salary) {
+  cat("The salary distribution is right-skewed, indicating a few high salaries pulling the mean upwards.\n")
+} else if (mean_salary < median_salary) {
+  cat("The salary distribution is left-skewed, indicating a few low salaries pulling the mean downwards.\n")
+} else {
+  cat("The salary distribution is symmetric.\n")
+}
