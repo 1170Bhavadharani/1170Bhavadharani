@@ -1,0 +1,30 @@
+# Numeric vector
+num_vec <- c(1, 2, 3, 4, 5, 6)
+
+# Complex vector
+complex_vec <- c(1+2i, 2+3i, 3+4i, 4+5i, 5+6i, 6+7i)
+
+# Logical vector
+logical_vec <- c(TRUE, FALSE, TRUE, FALSE, TRUE, FALSE)
+
+# Character vector
+char_vec <- c("A", "B", "C", "D", "E", "F")
+
+# Print vectors
+cat("Numeric Vector:\n", num_vec, "\n")
+cat("Complex Vector:\n", complex_vec, "\n")
+cat("Logical Vector:\n", logical_vec, "\n")
+cat("Character Vector:\n", char_vec, "\n")
+
+
+
+
+
+# Create a list
+my_list <- list(g1 = 10, g2 = "Hello", g3 = TRUE)
+
+# Add a new item
+my_list$g4 <- "R Prog"
+
+# Print updated list
+print(my_list)
