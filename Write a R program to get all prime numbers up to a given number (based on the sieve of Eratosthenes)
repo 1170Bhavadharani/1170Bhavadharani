@@ -1,0 +1,24 @@
+# Function to implement the Sieve of Eratosthenes
+sieve_of_eratosthenes <- function(n) {
+  if (n < 2) return(NULL)  # No primes below 2
+  
+  primes <- rep(TRUE, n)  # Assume all numbers are prime
+  primes[1] <- FALSE  # 1 is not a prime number
+  
+  for (i in 2:sqrt(n)) {
+    if (primes[i]) {
+      primes[seq(i^2, n, by = i)] <- FALSE  # Mark multiples as non-prime
+    }
+  }
+  
+  return(which(primes))  # Return the indices that are still TRUE
+}
+
+# Take user input
+num <- as.integer(readline("Enter a number: "))
+
+# Get all prime numbers up to the given number
+prime_numbers <- sieve_of_eratosthenes(num)
+
+# Print the prime numbers
+cat("Prime numbers up to", num, ":\n", prime_numbers, "\n")
