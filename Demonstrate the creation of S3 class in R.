@@ -1,0 +1,29 @@
+# Define S3 class constructor
+student <- function(name, age, marks) {
+  obj <- list(name = name, age = age, marks = marks)
+  class(obj) <- "student"  # Assign S3 class
+  return(obj)
+}
+
+# Define print method for student class
+print.student <- function(obj) {
+  cat("Student Name:", obj$name, "\n")
+  cat("Age:", obj$age, "\n")
+  cat("Marks:", obj$marks, "\n")
+}
+
+# Define summary method for student class
+summary.student <- function(obj) {
+  avg_marks <- mean(obj$marks)
+  cat("Summary:\n")
+  cat("Name:", obj$name, "\n")
+  cat("Age:", obj$age, "\n")
+  cat("Average Marks:", avg_marks, "\n")
+}
+
+# Create an S3 object
+s1 <- student("Alice", 20, c(85, 90, 78, 92))
+
+# Use print and summary methods
+print(s1)
+summary(s1)
