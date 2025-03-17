@@ -1,0 +1,13 @@
+# Extract first 10 English letters in lowercase
+first_10_lower <- letters[1:10]
+
+# Extract last 10 English letters in uppercase
+last_10_upper <- LETTERS[17:26]
+
+# Extract 22nd to 24th letters in uppercase
+range_22_24_upper <- LETTERS[22:24]
+
+# Print results
+cat("First 10 letters (lowercase):", first_10_lower, "\n")
+cat("Last 10 letters (uppercase):", last_10_upper, "\n")
+cat("22nd to 24th letters (uppercase):", range_22_24_upper, "\n")
