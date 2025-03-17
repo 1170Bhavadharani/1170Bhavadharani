@@ -1,0 +1,13 @@
+# Define prices
+rice_price_per_kg <- 40.75
+sugar_price_per_kg <- 30.00
+
+# Quantities
+rice_qty <- 2  # kg
+sugar_qty <- 5  # kg
+
+# Calculate total cost
+total_cost <- (rice_price_per_kg * rice_qty) + (sugar_price_per_kg * sugar_qty)
+
+# Print total amount
+cat("Total amount for", rice_qty, "kg of rice and", sugar_qty, "kg of sugar is Rs.", total_cost, "\n")
