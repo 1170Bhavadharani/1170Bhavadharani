@@ -1,0 +1,16 @@
+# Create a vector
+my_vector <- c(10, 20, 30, 40, 50)
+
+# Create a matrix (2x3)
+my_matrix <- matrix(1:6, nrow = 2, ncol = 3)
+
+# Define a function
+my_function <- function(x) {
+  return(x^2)
+}
+
+# Create a list with the elements
+my_list <- list(Vector = my_vector, Matrix = my_matrix, Square_Function = my_function)
+
+# Print the list
+print(my_list)
