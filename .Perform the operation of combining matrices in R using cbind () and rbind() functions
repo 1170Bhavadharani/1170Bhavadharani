@@ -1,0 +1,15 @@
+# Create two matrices
+matrix1 <- matrix(1:6, nrow = 2, ncol = 3)
+matrix2 <- matrix(7:12, nrow = 2, ncol = 3)
+
+# Combine matrices column-wise using cbind()
+combined_col <- cbind(matrix1, matrix2)
+
+# Combine matrices row-wise using rbind()
+combined_row <- rbind(matrix1, matrix2)
+
+# Print matrices
+cat("Matrix 1:\n"); print(matrix1)
+cat("\nMatrix 2:\n"); print(matrix2)
+cat("\nColumn-wise combined matrix:\n"); print(combined_col)
+cat("\nRow-wise combined matrix:\n"); print(combined_row)
