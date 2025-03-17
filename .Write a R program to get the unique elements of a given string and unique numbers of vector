@@ -1,0 +1,22 @@
+# Unique characters from a given string
+get_unique_chars <- function(str) {
+  unique_chars <- unique(strsplit(str, "")[[1]])  # Split and find unique elements
+  return(unique_chars)
+}
+
+# Unique numbers from a given vector
+get_unique_numbers <- function(vec) {
+  return(unique(vec))  # Find unique numbers in the vector
+}
+
+# Example string and vector
+str_input <- "programming"
+vec_input <- c(10, 20, 30, 10, 40, 50, 20, 30)
+
+# Get unique elements
+unique_chars <- get_unique_chars(str_input)
+unique_numbers <- get_unique_numbers(vec_input)
+
+# Print results
+cat("Unique characters in the string:", unique_chars, "\n")
+cat("Unique numbers in the vector:", unique_numbers, "\n")
